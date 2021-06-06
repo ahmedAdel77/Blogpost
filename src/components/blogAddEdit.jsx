@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -10,8 +10,6 @@ export default function BlogAddEdit(props) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const { id } = useParams();
 
   console.log(props.blog);
   let inEditMode = props.blog ? true : false;
@@ -138,7 +136,6 @@ export default function BlogAddEdit(props) {
                 disabled={!title || !body}
               >
                 {inEditMode ? 'Edit' : 'Post'}
-                
               </Button>
             </div>
           )}

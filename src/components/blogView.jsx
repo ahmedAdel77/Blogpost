@@ -1,7 +1,7 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Row, Col, Form, Spinner, Button, Modal } from 'react-bootstrap';
+import { Col, Form, Spinner, Button, Modal } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function BlogView(props) {
